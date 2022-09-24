@@ -3,7 +3,6 @@
 	// all pages through the use of the <BaseHead /> component.
 	import '../styles/global.css';
 	import '../styles/bulma.css';
-	import './node_modules/sal.js/dist/sal.css';
 
 	export interface Props {
 		title: string;
@@ -44,3 +43,7 @@
 	import sal from 'sal.js'
 	sal();
 </script>
+
+<style>
+	@import '../../node_modules/sal.js/dist/sal.css';
+</style>
