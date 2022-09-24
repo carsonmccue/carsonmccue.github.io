@@ -41,6 +41,13 @@
 		.tech img {
 			height: 50px;
 		}
+
+		@media(max-width: 767px) {
+			.reverse-columns {
+				flex-direction: column-reverse;
+				display: flex;
+			}
+		}
 	</style>
 </head>
 
@@ -162,7 +169,7 @@
 					<img src="elucaid.png" class="shadowed" loading="lazy">
 				</div>
 			</div>
-			<div class="columns is-vcentered pt-5" data-sal="slide-up" data-sal-duration="500"
+			<div class="columns reverse-columns is-vcentered pt-5" data-sal="slide-up" data-sal-duration="500"
 				data-sal-easing="ease-out-cubic">
 				<div class="column">
 					<img src="snippet.svg" loading="lazy">
