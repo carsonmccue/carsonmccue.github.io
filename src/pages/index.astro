@@ -1,0 +1,203 @@
+---
+	import BaseHead from '../components/BaseHead.astro';
+	import Header from '../components/Header.astro';
+	import Footer from '../components/Footer.astro';
+	import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+	<style>
+		img {
+			max-height: 55vh;
+		}
+
+		.trapezoid-1 {
+			clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 99%);
+		}
+
+		.trapezoid-2 {
+			clip-path: polygon(0 0, 100% 0, 86% 100%, 0 99%);
+		}
+
+		.shadowed {
+			box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0px 0 1px rgb(10 10 10 / 2%)
+		}
+
+		hr {
+			width: 90%;
+			margin: 0 auto !important;
+		}
+
+		.tech {
+			padding-right: 20px;
+			flex-shrink: 0;
+		}
+
+		.tech img {
+			height: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<Header title={SITE_TITLE} />
+	<main>
+		<section class="container section">
+			<div class="columns is-vecentered">
+				<div class="column content is-large" data-sal="slide-up" data-sal-duration="500"
+					data-sal-easing="ease-out-cubic">
+					<h1 class="title has-text-weight-bold">Hi, I'm Carson McCue</h1>
+					<h2 class="subtitle has-text-weight-normal">Web Developer & Entrepreneur</h2>
+					<p>I'm a first-year at the University of Virginia majoring in economics and minoring in data science. In
+						my free time, I build websites and businesses.</p>
+				</div>
+				<div class="column trapezoid-1" data-sal="slide-up" data-sal-duration="500"
+					data-sal-easing="ease-out-cubic">
+					<img src="computer.png" class="trapezoid-1">
+				</div>
+			</div>
+		</section>
+
+		<section class="container section">
+			<div class="columns is-vcentered">
+				<div class="column" data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease-out-cubic">
+					<img src="/me.png" class="trapezoid-2">
+				</div>
+				<div class="column content is-large" data-sal="slide-up" data-sal-duration="500"
+					data-sal-easing="ease-out-cubic">
+					<h1>Who am I?</h1>
+					<p>My current focus in using modern technology to improve upon outdated legacy systems. I enjoy finding
+						problems and building solutions.</p>
+					<br>
+					<p>My current toolkit for this is web development. As a fullstack developer, I leverage Svelte, NodeJS,
+						Firebase, and other technologies.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container section">
+			<div class="content is-large" data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease-out-cubic">
+				<h1>Education</h1>
+			</div>
+			<div class="columns content" data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease-out-cubic">
+				<div class="column">
+					<time>2022 - Present</time>
+					<h3 class="my-1">The University of Virginia</h3>
+					<p class="has-text-primary">Undergraduate</p>
+				</div>
+				<div class="column">
+					<time>2018 - 2022</time>
+					<h3 class="my-1">The Meadows School</h3>
+					<p class="has-text-primary">High School</p>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section class="container section">
+			<div class="content is-large" data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease-out-cubic">
+				<h1>Experience</h1>
+				<div class="columns">
+					<div class="column">
+						<h3>Front-end</h3>
+						<div class="is-flex">
+							<div class="tech">
+								<img src="svelte.png">
+							</div>
+							<div class="tech">
+								<img src="astro.svg">
+							</div>
+							<div class="tech">
+								<img src="basics.png">
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<h3>Back-end</h3>
+						<div class="is-flex">
+							<div class="tech">
+								<img src="node.png">
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<h3>Cloud Providers</h3>
+						<div class="is-flex">
+							<div class="tech">
+								<img src="firebase.png">
+							</div>
+							<div class="tech">
+								<img src="cloudflare.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section class="container section">
+			<div class="content is-large" data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease-out-cubic">
+				<h1>Work</h1>
+			</div>
+			<div class="columns is-vcentered pt-5" data-sal="slide-up" data-sal-duration="500"
+				data-sal-easing="ease-out-cubic">
+				<div class="column content is-large">
+					<h3 class="mb-1">Elucaid</h3>
+					<p>A financial aid processing tool built for independent schools.</p>
+				</div>
+				<div class="column">
+					<img src="elucaid.png" class="shadowed">
+				</div>
+			</div>
+		</section>
+
+		<section class="section" style="background: linear-gradient( #fff 50%, #Ffb52b 50%);">
+			<div class="box p-6">
+				<div class="columns" data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease-out-cubic">
+					<div class="column content is-large is-8">
+						<h1>Contact</h1>
+						<div class="columns">
+							<div class="column">
+								<div class="field">
+									<label class="label">Full Name</label>
+									<div class="control">
+										<input class="input" type="text" placeholder="John Johnson">
+									</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="field">
+									<label class="label">Email Address</label>
+									<div class="control">
+										<input class="input" type="text" placeholder="example@gmail.com">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">Message</label>
+							<textarea class="textarea" placeholder="Hey there..."></textarea>
+						</div>
+					</div>
+					<div class="column is-4 content is-medium">
+						<p class="mb-1">Email</p>
+						<h6>carsonem2003@gmail.com</h6>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</body>
+
+</html>

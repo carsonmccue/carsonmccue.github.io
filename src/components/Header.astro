@@ -1,0 +1,39 @@
+---
+	import HeaderLink from './HeaderLink.astro';
+	import { SITE_TITLE } from '../config';
+---
+
+<header class="container section">
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://bulma.io">
+				<strong class="has-text-primary">Carson McCue</strong>
+			</a>
+
+			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div class="navbar-menu">
+			<div class="navbar-end">
+				<HeaderLink>Home</HeaderLink>
+				<HeaderLink>About</HeaderLink>
+				<HeaderLink>Portfolio</HeaderLink>
+				<HeaderLink>Contact</HeaderLink>
+			</div>
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0em 0 2em;
+	}
+
+	h2 {
+		margin: 0.5em 0;
+	}
+</style>
